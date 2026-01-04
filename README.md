@@ -19,11 +19,14 @@ using real-time market data.
    git clone https://github.com/USERNAME/REPO_NAME.git
    cd REPO_NAME
 2. Create and Activate a Virutal Environment:
+   ```bash
    python -m venv venv
    venv\Scripts\activate   # Windows
 3. Install Dependencies:
+   ```bash
    pip install -r requirement.txt
 
 
 ## Run the App Using
-- streamlit run app.py
+```bash
+streamlit run app.py
