@@ -26,6 +26,19 @@ using real-time market data.
    ```bash
    pip install -r requirement.txt
 
+## Setup Database 
+1. Install MySQL
+2. Create database:
+   ```bash
+   CREATE DATABASE stockprofitmonitor;
+
+3. Create .env file: (in root Directory)
+   DB_USER=your_user
+   DB_PASSWORD=your_password
+   DB_HOST=localhost
+   DB_PORT=port_number
+   DB_NAME=stockprofitmonitor
+
 
 ## Run the App Using
 ```bash
