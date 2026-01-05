@@ -1,3 +1,7 @@
+from db import init_db
+# Initialize the database (create tables if they don't exist)
+init_db()
+
 import streamlit as st
 
 st.set_page_config(
