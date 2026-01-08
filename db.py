@@ -15,10 +15,18 @@ DB_HOST = os.getenv("DB_HOST")
 DB_PORT = os.getenv("DB_PORT")
 DB_NAME = os.getenv("DB_NAME")
 
-engine = create_engine(
+# Create the SQLAlchemy engine
+if DB_USER:
+    engine = create_engine(
     f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}",echo= False,future= True,
     pool_pre_ping=True
-)
+    )
+else:
+    # Fallback to SQLite if DB_USER is not set
+    engine = create_engine(
+    f"sqlite:///stockprofitmonitor.db", echo=False, future=True,
+    pool_pre_ping=True
+    )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 base = declarative_base()
