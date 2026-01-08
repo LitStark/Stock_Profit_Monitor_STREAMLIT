@@ -33,6 +33,7 @@ using real-time market data.
    CREATE DATABASE stockprofitmonitor;
 
 3. Create .env file: (in root Directory)
+   ```bash
    DB_USER=your_user
    DB_PASSWORD=your_password
    DB_HOST=localhost
